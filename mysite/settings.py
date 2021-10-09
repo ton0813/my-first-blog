@@ -65,9 +65,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls1'
-        'User':'name'
-        'PASSWORD':''
+        'NAME': 'djangogirls1',
+        'User':'name',
+        'PASSWORD':'',
         'HOST':'localhost',
         'PORT':'',
     }
@@ -113,5 +113,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-db_from_env=dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASE['default'].update(db_from_env)
